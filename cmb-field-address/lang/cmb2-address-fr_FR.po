@@ -1,0 +1,192 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: CMB2 Field Type: Address\n"
+"POT-Creation-Date: 2015-11-27 13:42-0500\n"
+"PO-Revision-Date: 2015-11-27 13:44-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: cmb-field-address.php\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: cmb-field-address.php:17
+msgid "British Columbia"
+msgstr "Colombie-Britannique"
+
+#: cmb-field-address.php:17
+msgid "B.C."
+msgstr "C.-B."
+
+#: cmb-field-address.php:18
+msgid "Ontario"
+msgstr "Ontario"
+
+#: cmb-field-address.php:18
+msgid "Ont."
+msgstr "Ont."
+
+#: cmb-field-address.php:19
+msgid "Newfoundland and Labrador"
+msgstr "Terre-Neuve-et-Labrador"
+
+#: cmb-field-address.php:19
+msgid "N.L."
+msgstr "T.-N.-L."
+
+#: cmb-field-address.php:20
+msgid "Nova Scotia"
+msgstr "Nouvelle-Écosse"
+
+#: cmb-field-address.php:20
+msgid "N.S."
+msgstr "N.-É."
+
+#: cmb-field-address.php:21
+msgid "Prince Edward Island"
+msgstr "Île-du-Prince-Édouard"
+
+#: cmb-field-address.php:21
+msgid "P.E.I."
+msgstr "Î.-P.-É."
+
+#: cmb-field-address.php:22
+msgid "New Brunswick"
+msgstr "Nouveau-Brunswick"
+
+#: cmb-field-address.php:22
+msgid "N.B."
+msgstr "N.-B."
+
+#: cmb-field-address.php:23
+msgid "Quebec"
+msgstr "Québec"
+
+#: cmb-field-address.php:23
+msgid "Que."
+msgstr "Qc"
+
+#: cmb-field-address.php:24
+msgid "Manitoba"
+msgstr "Manitoba"
+
+#: cmb-field-address.php:24
+msgid "Man."
+msgstr "Man."
+
+#: cmb-field-address.php:25
+msgid "Saskatchewan"
+msgstr "Saskatchewan"
+
+#: cmb-field-address.php:25
+msgid "Sask."
+msgstr "Sask."
+
+#: cmb-field-address.php:26
+msgid "Alberta"
+msgstr "Alberta"
+
+#: cmb-field-address.php:26
+msgid "Alta."
+msgstr "Alb."
+
+#: cmb-field-address.php:27
+msgid "Northwest Territories"
+msgstr "Territoires du Nord-Ouest"
+
+#: cmb-field-address.php:27
+msgid "N.W.T."
+msgstr "T.N.-O."
+
+#: cmb-field-address.php:28
+msgid "Nunavut"
+msgstr "Nunavut"
+
+#: cmb-field-address.php:28
+msgid "Nvt."
+msgstr "Nt"
+
+#: cmb-field-address.php:29
+msgid "Yukon Territory"
+msgstr "Yukon"
+
+#: cmb-field-address.php:29
+msgid "Y.T."
+msgstr "Yn"
+
+#: cmb-field-address.php:55
+msgid "Normal Address"
+msgstr "Adresse normale"
+
+#: cmb-field-address.php:56
+msgid "National"
+msgstr "National"
+
+#: cmb-field-address.php:57
+msgid "International"
+msgstr "International"
+
+#. Plugin Name of the plugin/theme
+msgid "CMB2 Field Type: Address"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Adds <code>address</code> as a feild type to CMB2"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Jeremy Turowetz"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://jeremy.turowetz.com"
+msgstr ""
+
+#~ msgid "BC"
+#~ msgstr "C.-B."
+
+#~ msgid "ON"
+#~ msgstr "Ont."
+
+#~ msgid "NL"
+#~ msgstr "T.-N.-L"
+
+#~ msgid "NS"
+#~ msgstr "N.-É."
+
+#~ msgid "PE"
+#~ msgstr "Î.-P.-É."
+
+#~ msgid "NB"
+#~ msgstr "N.-B."
+
+#~ msgid "QC"
+#~ msgstr "Qc"
+
+#~ msgid "MB"
+#~ msgstr "Man."
+
+#~ msgid "SK"
+#~ msgstr "Sask."
+
+#~ msgid "AB"
+#~ msgstr "Alb."
+
+#~ msgid "NT"
+#~ msgstr "T.N.-O."
+
+#~ msgid "NU"
+#~ msgstr "NU"
+
+#~ msgid "YT"
+#~ msgstr "Yn"
