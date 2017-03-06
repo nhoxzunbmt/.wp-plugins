@@ -1431,14 +1431,33 @@ class GFFormDisplay {
 		// clean up files from abandoned submissions older than 48 hours (30 days if Save and Continue is enabled)
 		$files = glob( $target_path . '*' );
 		if ( is_array( $files ) ) {
-			$seconds_in_day = 24 * 60 * 60;
+			$seconds_in_day  = 24 * 60 * 60;
+			$save_enabled    = rgars( $form, 'save/enabled' );
+			$expiration_days = $save_enabled ? 30 : 2;
 
 			/**
-			 * Filter lifetime in days of an incomplete form submission
+			 * Filter lifetime in days of temporary files.
 			 *
-			 * @see GFFormsModel::purge_expired_incomplete_submissions()
+			 * @since 2.1.3.5
+			 *
+			 * @param int   $expiration_days The number of days temporary files should remain in the uploads directory. Default is 2 or 30 if save and continue is enabled.
+			 * @param array $form            The form currently being processed.
 			 */
-			$lifespan = rgars( $form, 'save/enabled' ) ? $expiration_days = apply_filters( 'gform_incomplete_submissions_expiration_days', 30 ) * $seconds_in_day : 2 * $seconds_in_day;
+			$expiration_days = apply_filters( 'gform_temp_file_expiration_days', $expiration_days, $form );
+
+			if ( $save_enabled ) {
+
+				/**
+				 * Filter lifetime in days of an incomplete form submission
+				 *
+				 * @see GFFormsModel::purge_expired_incomplete_submissions()
+				 */
+				$expiration_days = apply_filters( 'gform_incomplete_submissions_expiration_days', $expiration_days );
+
+			}
+
+			$lifespan = $expiration_days * $seconds_in_day;
+
 			foreach ( $files as $file ) {
 				if ( is_file( $file ) && time() - filemtime( $file ) >= $lifespan ) {
 					unlink( $file );

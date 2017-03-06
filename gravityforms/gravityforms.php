@@ -3,7 +3,7 @@
 Plugin Name: Gravity Forms
 Plugin URI: http://www.gravityforms.com
 Description: Easily create web forms and manage form entries within the WordPress admin.
-Version: 2.1.3
+Version: 2.1.3.6
 Author: rocketgenius
 Author URI: http://www.rocketgenius.com
 Text Domain: gravityforms
@@ -210,7 +210,7 @@ class GFForms {
 	 *
 	 * @var string $version The version number.
 	 */
-	public static $version = '2.1.3';
+	public static $version = '2.1.3.6';
 
 	/**
 	 * Runs after Gravity Forms is loaded.
@@ -3910,7 +3910,7 @@ SET d.value = l.value"
 			</div>
 
 		</div>
-		
+
 		<script type="text/javascript">
 			function GF_ShowEditTitle(){
 				jQuery( '#edit-title-container' ).css( 'visibility', 'visible' )
@@ -3922,9 +3922,9 @@ SET d.value = l.value"
 			}
 
 			function GF_SaveTitle(){
-				
+
 				var title = jQuery( '#edit-title-input' ).val();
-				
+
 				jQuery.post(ajaxurl, {
 						action			: "gf_save_title",
 						gf_save_title	: '<?php echo wp_create_nonce( 'gf_save_title' ); ?>',
@@ -3986,7 +3986,7 @@ SET d.value = l.value"
 
 		// Get all forms.
 		$all_forms = RGFormsModel::get_forms( null, 'title' );
-		
+
 		// Sort forms by active state.
 		$forms = array( 'active' => array(), 'inactive' => array(), );
 		foreach ( $all_forms as $form ) {
