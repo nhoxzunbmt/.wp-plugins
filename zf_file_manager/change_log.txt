@@ -1,0 +1,56 @@
+----------v1.0.10----------
+- Autoupdate collision from WP repo - FIXED
+
+----------v1.0.9----------
+- Some deprecated functions - FIXED
+
+----------v1.0.8----------
+- XSS vulnerability - FIXED
+- Default sorting option - ADDED
+- Login form - ADDED
+- Id and Class name conflict - FIXED
+- Create folder child from parent child functionality - ADDED
+- Child folders Drag and drop bug - FIXED
+- Some options added to setting configuration - ADDED
+- Show folder widget - ADDED
+
+----------v1.0.7----------
+- Show all root folders in shortcode generator - FIXED
+
+----------v1.0.6----------
+- Hide direct file url for downloads - ADDED
+- Manage download logs registered - ADDED
+- File downloads number meta data - ADDED
+- Folder downloads number meta data - ADDED
+- Show file downloads option - ADDED
+- Show file downloads information option - ADDED
+- External file (no title) error - FIXED
+
+----------v1.0.5----------
+- Filter controls added to folder view - ADDED
+- Folder information ribbon added to folder view - ADDED
+- Menu Bar an Folder Information border color option - ADDED
+- External File weight meta data - ADDED
+- File weight decimal places option - ADDED
+- Infinite extra field for External and Media files - ADDED
+- Database clean options when disabled - ADDED
+
+----------v1.0.4----------
+- Multiples shortcodes at the same time - FIXED
+- CSS on row view - FIXED
+
+----------v1.0.3----------
+- Show spinner configuration option - ADDED
+- Show many folder at the same time - ADDED
+
+----------v1.0.2----------
+- Configure access tabs error - FIXED
+- Public folder function - ADDED
+- Many configuration options - ADDED
+- Loading spinner - ADDED
+
+----------v1.0.1----------
+- Shortcode order - FIXED
+
+----------v1.0.0----------
+-First release

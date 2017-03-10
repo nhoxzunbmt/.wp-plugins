@@ -1,0 +1,95 @@
+@charset "utf-8";
+.b5-file li, .b5-folders li{
+	width:280px;
+	margin:0 10px 10px 0;;	
+	-moz-transition:width 0.25s, opacity 0.25s, -moz-opacity 0.25s;
+    -webkit-transition:width 0.25s, opacity 0.25s, -webkit-opacity 0.25s;
+    -o-transition:width 0.25s, opacity 0.25s, -o-opacity 0.25s;
+    transition:width 0.25s, opacity 0.25s
+}
+.b5-file .b5-icon, .b5-folders .b5-folder{
+	width:70px;
+	text-align:center;
+	vertical-align:middle;
+	overflow:hidden
+}
+.b5-file .b5-thumbnail{
+    width:250px
+}
+.b5-file .b5-thumbnail .b5-icon{
+    width:100%
+}
+.b5-file .b5-icon img, .b5-folders .b5-folder img{
+	max-height:70px;
+	max-width:70px;
+    margin-top:5px
+}
+.b5-file .b5-thumbnail .b5-icon img{
+    width:auto;
+    max-height:none;
+    max-width:266px
+}
+.b5-file .b5-info, .b5-folders .b5-info{
+	width:180px;
+	vertical-align:top;
+	overflow:hidden
+}
+.b5-file .b5-info p, .b5-folders .b5-info p{
+	margin:.1em 0
+}
+.b5-file .b5-info a, .b5-folders .b5-info a{
+	font-weight:bold;
+	text-decoration:none
+}
+.b5-file li, .b5-folders li, .b5-file .b5-icon, .b5-folders .b5-folder, .b5-file .b5-info, .b5-folders .b5-info{
+	display:inline-block
+}
+.b5-file .b5-icon, .b5-folders .b5-folder
+.b5-file .b5-info, .b5-folders .b5-info{
+	margin:0 0 2px 2px
+}
+.b5-file li.removed{
+	width:0;
+	margin:0;
+	opacity:0;
+	-webkit-opacity:0;
+	-moz-opacity:0;
+	-o-opacity:0
+}
+.b5-file li.removed:after{
+	content:' ';
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:2;
+	opacity:.4;
+	background-color:#F00
+}
+.b5-folder .dashicons{
+    display:inline-block;
+    width:60px;
+    height:60px;
+    cursor:move;
+    font-size:60px
+}
+.b5-folder.b5-folder-over .dashicons{
+    color:#d54e21
+}
+.b5-list{
+    width:60px!important
+}
+.b5-breadcrumbs li{
+	float:left
+}
+.button.b5-file-advanced-upload, .button.b5-file-external-upload, .button.b5-file-users-add, .button.b5-file-advanced-add-folder{
+    margin-right:5px
+}
+.button.b5-file-create-folder, .button-cancel.b5-file-button-cancel{
+    margin-left:5px
+}
+#b5-file-child-folder-name.error{
+    box-shadow:0 0 5px #EE1000;
+    border:1px solid #831000
+}

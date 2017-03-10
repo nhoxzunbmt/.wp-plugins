@@ -1,0 +1,316 @@
+.b5_file_manager_wrap{
+    margin:10px 20px 0 2px
+}
+#b5_file_manager_header{
+	padding:20px 10px;
+	position:relative
+}
+.b5_file_manager_logo{
+	min-width:50%;
+	float:left;
+	height:60px;
+	background:url(../images/logo_theme.png) no-repeat top left
+}
+.b5_file_manager_tabs_container{
+    margin:0;
+    border:1px solid #cbcbcb;
+	-moz-background-clip:padding-box;
+	-webkit-background-clip:padding-box;
+	background-clip:padding-box;
+	background:#eaeaea;
+	position:relative
+}
+.b5_file_manager_tabs_container .b5_file_manager_tabs{
+    list-style:none;
+	width:199px;
+	cursor:pointer;
+	z-index:2;
+	position:absolute;
+	left:-1px
+}
+.b5_file_manager_tabs_container div.b5_file_manager_curvedContainer{
+	margin-left:197px;
+	border-left:1px solid #cbcbcb;
+	background:#fff;
+	min-height:560px
+}
+.b5_file_manager_tabs_container div.b5_file_manager_curvedContainer .b5_file_manager_tabcontent{
+	display:none;
+	padding:10px 20px;
+	font-size:12px;
+	min-height:750px
+}
+.b5_file_manager_tabs .b5_file_manager_tab{
+    display:block;
+    height:40px;
+    background:#eaeaea;
+    border:1px solid #cbcbcb;
+    border-top:none;
+    position:relative;
+   	color:#142840
+}
+.b5_file_manager_tabs div.link{
+	padding:12px 10px;
+	font-size:14px
+}
+.b5_file_manager_tabs .b5_file_manager_tab.b5-selected{
+  	background:#fff;
+    border-right-color:#fff;
+    color:#000
+}
+.b5_file_manager_tabs .b5_file_manager_tab:hover{
+	background:rgba(255,255,255,0.5)
+}
+.b5_file_manager_tabs .b5_file_manager_tab div.arrow{
+    position:absolute;
+    height:58px;
+    width:17px;
+    left:100%;
+    top:0;
+    display:none
+}
+.b5_file_manager_tabs .b5_file_manager_tab.b5-selected div.arrow{
+    display:block
+}
+.b5_file_manager_buttonContainer{
+	position:relative;
+	float:right;
+	padding:10px 0 10px 10px;
+	text-align:right;
+    display:table-cell;
+    vertical-align:middle
+}
+.b5_file_manager_description{
+	clear:left;
+    color:#666;
+    font-size:13px;
+    font-style:italic;
+    margin:2px 0 5px;
+    line-height:1.5
+}
+.b5_file_manager_theme_column{
+	width:98%;
+	margin:1%;
+	float:left
+}
+.b5_file_manager_theme_column textarea{
+    width:60%;
+    height:200px
+}
+.b5_file_manager_theme_column input[type="text"]{
+    font-size: 1.4em
+}
+.b5_file_manager_theme_column .button.button-primary{
+    margin-bottom:10px
+}
+.b5_file_manager_columnhalf{
+	width:48%!important
+}
+div.b5_file_manager_section{
+    font-size:18px
+}
+h3.b5_file_manager_section{
+	padding:10px;
+	margin:0
+}
+.info_section{
+	padding-bottom:10px
+}
+.b5_file_manager_buttonContainer .button-primary{
+    padding:10px 16px!important;
+    font-size:12px;
+    border:0;
+    color:#fff;
+    margin-top:0;
+    height:auto!important;
+    -webkit-transition:0.1s linear all;
+    -moz-transition:0.1s linear all;
+    -ms-transition:0.1s linear all;
+    -o-transition:0.1s linear all;
+    transition:0.1s linear all;
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    border-radius:2px;
+    text-shadow:0 0 0!important
+}
+.b5_file_manager_buttonContainer .button-primary:hover{
+    opacity:0.9!important
+}
+#b5_file_manager_update_settings_button{
+    box-shadow:none;
+    margin-left:5px
+}
+#b5_file_manager_reset_settings_button{
+	background:#eaeaea;
+    box-shadow:none;
+    color:#333;
+    border:1px solid #ccc
+}
+.b5_options_remove_image_button{
+	background-image:linear-gradient(to bottom, #f1f1f1, #fff)!important;
+	border-color:#ccc!important;
+	color:red!important;
+	box-shadow:none!important
+}
+#b5_file_manager_savemessage{
+    display:none;
+    width:200px;
+    color:#fff!important;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;
+    position:fixed;
+    top:40%;
+    left:50%;
+    margin-left:-100px;
+    text-align:center;
+    background:url(../images/icon_checked.png) no-repeat 15px 12px rgba(0,0,0,0.5);
+    padding:20px 0 20px 30px;
+    font-size:1.5em
+}
+.b5_mime_item, .b5_extra_field{
+    border-bottom:1px solid #DFDFDF;
+    min-height:36px;
+    position:relative;
+    margin-top:3px;
+    width:100%
+}
+.b5_extra_field .b5_extra_field_name{
+    line-height:36px
+}
+.b5_mime_item .b5_mime{
+    line-height:36px;
+    overflow:hidden
+}
+.b5_mime_item .b5_mime.extension{
+    width:25%;
+    float:left
+}
+.b5_mime_item .b5_mime.mime{
+    width:75%;
+    overflow:hidden
+}
+.b5_mime_item .b5_mime.extension.upload{
+    width:25%
+}
+#b5_mime_form input#b5_mime_extension{
+    width:98%
+}
+#b5_button_add_mime.button, #b5_button_all_delete_mime.button{
+    height:24px;
+    margin-top:5px;
+    margin-left:10px
+}
+.b5-upload-type-all-delete{
+    float:right
+}
+.b5_file_manager_tab .link i{
+    padding-right:5px
+}
+.b5_file_manager_buttonContainer .button-primary i{
+    color:#fff!important
+}
+.b5_mime input.error{
+    box-shadow:0 0 5px rgb(238, 16, 0);
+    border:1px solid rgb(131, 16, 0)
+}
+#b5_file_manager_extra_fields .b5_extra_field:last-child{
+    margin-bottom:10px
+}
+.b5_file_manager_tabs #tab_menu_1 .dashicons{
+	background:url(../images/file_icons.png) no-repeat top left
+}
+.b5_file_manager_tabs .dashicons{
+	content:""
+}
+.file_icon{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	margin-right:10px
+}
+.icon_settings{
+	background:url(../images/file_icons.png) no-repeat top left
+}
+.icon_colors{
+	background:url(../images/file_icons.png) no-repeat 0 -23px
+}
+.icon_messages{
+	background:url(../images/file_icons.png) no-repeat 0 -46px
+}
+.icon_icons{
+	background:url(../images/file_icons.png) no-repeat 0 -72px
+}
+.icon_upload{
+	background:url(../images/file_icons.png) no-repeat 0 -96px
+}
+.b5-file-manager-popup-colorpicker{
+    width:70px
+}
+@media only screen and (min-width:690px) and (max-width:785px){
+	.b5_file_manager_theme_column{
+		width:98%
+	}
+    .b5_mime_item .b5_mime.mime{
+        width:60%
+    }
+}
+
+@media only screen and (min-width:480px) and (max-width:690px){
+	.b5_file_manager_tab{
+		width:32px!important
+	}
+	.b5_file_manager_logo{
+		width:100%;
+	}
+    .b5_mime_item .b5_mime.mime{
+        width:60%
+    }
+	
+	div.b5_file_manager_tabs div.link span{
+		display:none
+	}
+	.b5_file_manager_tabs_container div.b5_file_manager_curvedContainer{
+		margin-left:32px
+	}
+	.b5_file_manager_theme_column input[type="text"], .b5_file_manager_theme_column textarea{
+		width:100%
+	}
+	.b5_file_manager_theme_column{
+		width:98%
+	}
+	.b5_file_manager_columnhalf{
+	    width:98%!important
+    }
+}
+
+@media only screen and (max-width:480px){
+	.b5_file_manager_tab{
+		width:32px!important
+	}
+	.b5_file_manager_logo{
+		width:100%
+	}
+	div.b5_file_manager_tabs div.link span{
+		display:none
+	}
+	.b5_file_manager_tabs_container div.b5_file_manager_curvedContainer{
+		margin-left:32px
+	}
+    .b5_mime_item .b5_mime.mime{
+        width:50%
+    }
+	.b5_file_manager_columnhalf{
+		width:98%!important
+	}
+	.b5_file_manager_theme_column{
+		width:98%
+	}
+	.b5_file_manager_theme_column input[type="text"]{
+		width:100%;
+		max-width:100%
+	}
+	div.b5_file_manager_buttonContainer{
+		position:relative
+	}
+}

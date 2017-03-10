@@ -1,0 +1,104 @@
+#parent_id{
+    width:100%
+}
+.mce-b5-file-manager button span{
+    padding-right:20px
+}
+.media-item, .user-item, .mime-item{
+    border-bottom:1px solid #dfdfdf;
+    min-height:36px;
+    position:relative;
+    width:100%
+}
+.user-item .username, .mime-item .extension{
+    line-height:36px;
+    overflow:hidden
+}
+.b5-admin-all-users, .b5-admin-all-groups{
+    font-weight:bold
+}
+/*Folder access*/
+.b5-admin-tabs-container{
+    margin-bottom:10px
+}
+.b5-admin-tabs-container div.b5-tabs-panel{
+    min-height:42px;
+    max-height:200px;
+    overflow:auto;
+    padding:0 0.9em;
+    border:solid 1px #dfdfdf;
+    background-color:#fdfdfd
+}
+.b5-admin-tabs-container ul.categorychecklist ul{
+    margin-right:18px
+}
+.b5-admin-tabs-container .b5-tabs-panel{
+    border: 3px solid
+}
+ul.b5-admin-tabs{
+    margin-top:12px
+}
+.b5-admin-tabs{
+    margin:8px 0 3px
+}
+ul.b5-admin-tabs li{
+    display:inline;
+    line-height:1.35em
+}
+.b5-admin-tabs a{
+    text-decoration:none
+}
+ul.b5-admin-tabs li{
+    border:solid 1px transparent;
+    position:relative
+}
+ul.b5-admin-tabs li.b5-tabs{
+    border:1px solid #dfdfdf;
+    border-bottom-color:#fdfdfd;
+    background-color:#fdfdfd
+}
+ul.b5-admin-tabs li{
+    padding:3px 5px 5px
+}
+.b5-admin-tabs ul.b5-tabs-list ul{
+    margin-right:18px
+}
+ul.b5-tabs-list li{
+    margin:0;
+    padding:0;
+    line-height:22px;
+    word-wrap:break-word
+}
+#external_file_link{
+    padding:3px;
+    font-size:1.3em;
+    height:1.7em;
+    background-color:#fff
+}
+.b5-meta-label{
+    margin:0
+}
+#file_downloads{
+    height:28px
+}
+.b5-meta-button{
+    text-align:right
+}
+
+@media screen and (max-width:782px){
+    ul.b5-admin-tabs{
+        margin:30px 0 13px
+    }
+    ul.b5-admin-tabs li.b5-tabs{
+        padding:15px
+    }
+    .column-users_group, .column-users, .column-files, .column-public, .column-weight, .column-folder_name, .column-visitor_ip, .column-date, .column-visitor_name, .column-downloads{
+        display:none
+    }
+    .column-file_name{
+        width:100%
+    }
+    #external-file input[type="number"]{
+        width:100%
+    }
+}
