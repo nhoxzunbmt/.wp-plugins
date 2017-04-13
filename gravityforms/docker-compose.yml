@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  codeception:
+    build: .
+    depends_on:
+      - wordpress
+    volumes:
+      - ${PWD}:/project
+      - wp-core:/wp-core
+      - ${PWD}:/wp-core/wp-content/plugins/gravityforms
+    entrypoint: /docker-entrypoint.sh
+  wordpress:
+    image: wordpress:4.7
+    depends_on:
+      - mysql
+      - phantomjs
+    volumes:
+      - wp-core:/var/www/html
+      - ${PWD}:/var/www/html/wp-content/plugins/gravityforms
+    ports:
+      - 8000:80
+    environment:
+      WORDPRESS_DB_PASSWORD: wordpress
+
+  mysql:
+    image: mariadb
+    environment:
+       MYSQL_ROOT_PASSWORD: wordpress
+       MYSQL_DATABASE: wordpress
+       MYSQL_USER: wordpress
+       MYSQL_PASSWORD: wordpress
+
+  phantomjs:
+    image: davert/phantomjs-env
+    ports:
+      - 4444
+volumes:
+  wp-core:
