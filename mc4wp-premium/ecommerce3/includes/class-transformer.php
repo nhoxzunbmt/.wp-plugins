@@ -29,7 +29,7 @@ class MC4WP_Ecommerce_Object_Transformer {
 	 *
 	 * @return string
 	 */
-	private function getObjectProperty($object, $property) {
+	private function get_object_property($object, $property) {
 		// since WooCommerce 3.0, but only on instances of WC_Order
 		$method_name = 'get_' . $property;
 		if (method_exists($object, $method_name)) {
@@ -49,7 +49,7 @@ class MC4WP_Ecommerce_Object_Transformer {
 	 *
 	 * @return string
 	 */
-	public function getCustomerId($email_address) {
+	public function get_customer_id($email_address) {
 		return (string) md5(strtolower($email_address));
 	}
 
@@ -58,8 +58,8 @@ class MC4WP_Ecommerce_Object_Transformer {
 	 * @see get_customer_id
 	 * @return string
 	 */
-	public function getCartId($customer_email_address) {
-		return $this->getCustomerId($customer_email_address);
+	public function get_cart_id($customer_email_address) {
+		return $this->get_customer_id($customer_email_address);
 	}
 
 	/**
@@ -70,7 +70,7 @@ class MC4WP_Ecommerce_Object_Transformer {
 	 * @throws Exception
 	 */
 	public function customer($object) {
-		$billing_email = $this->getObjectProperty($object, 'billing_email');
+		$billing_email = $this->get_object_property($object, 'billing_email');
 		if (empty($billing_email)) {
 			throw new Exception("Customer data requires a billing_email property", 100);
 		}
@@ -101,7 +101,7 @@ class MC4WP_Ecommerce_Object_Transformer {
 			'billing_last_name' => 'last_name',
 		);
 		foreach ($map as $source_property => $target_property) {
-			$value = $this->getObjectProperty($object, $source_property);
+			$value = $this->get_object_property($object, $source_property);
 			if (!empty($value)) {
 				$customer_data[$target_property] = $value;
 			}
@@ -117,7 +117,7 @@ class MC4WP_Ecommerce_Object_Transformer {
 			'billing_country' => 'country',
 		);
 		foreach ($map as $source_property => $target_property) {
-			$value = $this->getObjectProperty($object, $source_property);
+			$value = $this->get_object_property($object, $source_property);
 			if (!empty($value)) {
 				$customer_data['address'][$target_property] = $value;
 			}
@@ -136,7 +136,7 @@ class MC4WP_Ecommerce_Object_Transformer {
 		$customer_data = apply_filters('mc4wp_ecommerce_customer_data', $customer_data);
 
 		// set ID because we don't want that to be filtered.
-		$customer_data['id'] = $this->getCustomerId($billing_email);
+		$customer_data['id'] = $this->get_customer_id($billing_email);
 
 		return $customer_data;
 	}
@@ -147,7 +147,7 @@ class MC4WP_Ecommerce_Object_Transformer {
 	 * @return array
 	 */
 	public function order(WC_Order $order) {
-		$billing_email = $this->getObjectProperty($order, 'billing_email');
+		$billing_email = $this->get_object_property($order, 'billing_email');
 
 		// generate order data
 		$items = $order->get_items();
@@ -177,7 +177,7 @@ class MC4WP_Ecommerce_Object_Transformer {
 		// add order
 		$order_data = array(
 			'id' => (string) $order->get_id(),
-			'customer' => array('id' => $this->getCustomerId($billing_email)),
+			'customer' => array('id' => $this->get_customer_id($billing_email)),
 			'order_total' => floatval($order->get_total()),
 			'tax_total' => floatval($order->get_total_tax()),
 			'shipping_total' => floatval($order->get_shipping_total()),
@@ -187,7 +187,7 @@ class MC4WP_Ecommerce_Object_Transformer {
 		);
 
 		// merge in order statuses (financial_status, fulfillment_status)
-		$statuses = $this->orderStatus($order);
+		$statuses = $this->order_status($order);
 		$order_data = array_merge($order_data, $statuses);
 
 		$date_created = $order->get_date_created();
@@ -228,11 +228,11 @@ class MC4WP_Ecommerce_Object_Transformer {
 		if ($product instanceof WC_Product_Variable) {
 			foreach ($product->get_children() as $product_variation_id) {
 				$product_variation = wc_get_product($product_variation_id);
-				$variants[] = $this->getProductVariantData($product_variation);
+				$variants[] = $this->get_product_variant_data($product_variation);
 			}
 		} else {
 			// default variant
-			$variants[] = $this->getProductVariantData($product);
+			$variants[] = $this->get_product_variant_data($product);
 		}
 
 		// data to send to MailChimp
@@ -277,7 +277,7 @@ class MC4WP_Ecommerce_Object_Transformer {
 	 * @param WC_Product $product
 	 * @return array
 	 */
-	private function getProductVariantData(WC_Product $product) {
+	private function get_product_variant_data(WC_Product $product) {
 
 		// determine inventory quantity; default to 0 for unpublished products
 		$inventory_quantity = 0;
@@ -380,7 +380,7 @@ class MC4WP_Ecommerce_Object_Transformer {
 	 * @param WC_Order $order
 	 * @return array
 	 */
-	private function orderStatus($order) {
+	private function order_status($order) {
 		$map = array(
 			// Order received (unpaid)
 			'pending' => array(

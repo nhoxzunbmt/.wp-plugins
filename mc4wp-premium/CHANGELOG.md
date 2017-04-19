@@ -1,6 +1,13 @@
 Changelog
 ==========
 
+#### 3.3.9 - April 13, 2017
+
+**Fixes**
+
+- E-commerce: unexisting method calls when using WooCommerce 3.0 or later.
+
+
 #### 3.3.8 - April 13, 2017
 
 **Fixes**:
